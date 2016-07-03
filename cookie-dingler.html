@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+
+
+
+
+<head>
+
+
+<style>
+
+body{
+ border: 2px solid black;
+ background-image: url('img/rfm-party-80.jpg');
+ background-size: cover;
+ background-position: 50% 50% ; 
+ background-attachment: fixed;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+} 
+
+
+.wrapper{
+  display: flex;
+  flex-grow: 1;
+  text-align: center; 
+}
+
+.col-1{ /*Cookie's style*/
+ 
+  flex-grow: 1;
+  border-right: 10px solid fuchsia;
+  background-image: url('img/photo1.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50% ;
+  opacity: 0.9;
+}
+
+.col-2 { /*Hall Of Fame*/
+  
+  flex-grow: 1;
+  border-right: 10px solid fuchsia;
+}
+  
+
+.col-3 { /*Calculation's Home*/
+  
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) { /*media queries: reponsive layout*/
+  .wrapper {
+    flex-direction: column;
+   }
+   .col-1, .col-2 {
+    border-bottom: 10px solid pink;
+    border-right: none;
+   }   
+  }
+.name {
+  font-size: 30px;
+  color: red;
+  
+}
+.score {
+ font-size: 20px;
+ color: green;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="wrapper">
+  
+  <div class="col-1">
+      <p class="name">Cookie's style</p>
+  
+      <button id="bouton" type ="button" class ="btn btn-success">click me</button>
+      
+      <div id="affichage" class="score"  value="0">0</div>
+ </div>
+  
+  <div class="col-2">
+  <p class="name">Hall Of Fame</p>
+  </div>
+  
+  <div class="col-3">
+  <p class="name">Calculation's Home</p>
+  </div>
+
+</div> 
+
+
+</div>
+
+<script type="text/javascript" src="cookie-dingler.js"></script>
+
+</body>
+</html>
